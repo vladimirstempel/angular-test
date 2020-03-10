@@ -10,6 +10,15 @@ export const environment = {
       search_users: 'search/users',
       user: 'users/$user'
     }
+  },
+  firebaseConfig: {
+    apiKey: 'AIzaSyCT7CnJHDN2QJep7-pI3e0Ye0ckeKKFzU0',
+    authDomain: 'angular-test-task-70820.firebaseapp.com',
+    databaseURL: 'https://angular-test-task-70820.firebaseio.com',
+    projectId: 'angular-test-task-70820',
+    storageBucket: 'angular-test-task-70820.appspot.com',
+    messagingSenderId: '51481014505',
+    appId: '1:51481014505:web:67a58a614f02119abbc078'
   }
 };
 
