@@ -1,0 +1,65 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Authorization</h5>
+    <ul ngbNav (navChange)="onNavChange()" #nav="ngbNav" class="nav-tabs">
+      <li ngbNavItem>
+        <a ngbNavLink>Login</a>
+        <ng-template ngbNavContent>
+          <form [formGroup]="authForm" (ngSubmit)="login()">
+            <div class="form-group">
+              <label for="email-login">Email address</label>
+              <input type="email"
+                     formControlName="email"
+                     [ngClass]="{
+                        'is-invalid': authForm.get('email').invalid && authForm.touched
+                     }"
+                     class="form-control"
+                     id="email-login">
+            </div>
+            <div class="form-group">
+              <label for="password-login">Password</label>
+              <input type="password"
+                     formControlName="password"
+                     [ngClass]="{
+                        'is-invalid': authForm.get('password').invalid && authForm.touched
+                     }"
+                     class="form-control"
+                     id="password-login">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-dark ml-2" (click)="loginGithub()"><fa-icon [icon]="faGithub" class="mr-1"></fa-icon>GitHub</button>
+          </form>
+        </ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink>Register</a>
+        <ng-template ngbNavContent>
+          <form [formGroup]="authForm" (ngSubmit)="register()">
+            <div class="form-group">
+              <label for="email-register">Email address</label>
+              <input type="email"
+                     formControlName="email"
+                     [ngClass]="{
+                        'is-invalid': authForm.get('email').invalid && authForm.touched
+                     }"
+                     class="form-control"
+                     id="email-register">
+            </div>
+            <div class="form-group">
+              <label for="password-register">Password</label>
+              <input type="password"
+                     formControlName="password"
+                     [ngClass]="{
+                        'is-invalid': authForm.get('password').invalid && authForm.touched
+                     }"
+                     class="form-control"
+                     id="password-register">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </ng-template>
+      </li>
+    </ul>
+    <div class="tab-content" [ngbNavOutlet]="nav"></div>
+  </div>
+</div>
