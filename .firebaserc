@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-test-task-70820": {
+      "hosting": {
+        "angular-task": [
+          "angular-test-task-70820"
+        ]
+      }
+    }
+  }
+}

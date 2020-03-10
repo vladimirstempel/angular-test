@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">User Details</h5>
+    <div *ngIf="user$ | async as user">
+      <img [src]="user.avatar_url" class="img-thumbnail rounded float-left mr-4" alt="No avatar">
+      <h5>{{ user.name }}</h5>
+      <h6><a [href]="user.html_url" target="_blank">{{ user.login }}</a></h6>
+      <div class="additional">
+        <p><strong>User type:</strong> {{ user.type }}</p>
+        <p><strong>Registered since:</strong> {{ user.created_at }}</p>
+      </div>
+    </div>
+  </div>
+</div>

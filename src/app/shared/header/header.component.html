@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item" *ngFor="let nav of navList">
+        <a class="nav-link" [routerLink]="nav.link" routerLinkActive="active">{{ nav.label }} <span class="sr-only" *ngIf="isCurrentPage(nav.link)">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
